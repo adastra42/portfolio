@@ -32,9 +32,9 @@ The agent watches the mailbox continuously, classifies each new message by owner
 
 ```mermaid
 flowchart TD
-    A["Shared support mailbox"] -->|"Gmail trigger — polled every 60s"| B["New unread message<br/>subject · body · sender"]
-    B --> C["Mark as read<br/><i>idempotency guard</i>"]
-    C --> D{"AI Triage<br/>Claude Sonnet<br/>single-token output"}
+    A["Shared support mailbox"] -->|"Gmail trigger — polled every 60s"| B["New unread message<br/> subject · body · sender"]
+    B --> C["Mark as read<br/><i> idempotency guard</i>"]
+    C --> D{"AI Triage<br/> Claude Sonnet<br/> single-token output"}
     D -->|"vendorsupport"| E["Format &amp; forward<br/>→ Vendor support queue"]
     D -->|"servicedesk"| F["Format &amp; forward<br/>→ Internal service desk"]
     E --> L[("Append to routing log")]
