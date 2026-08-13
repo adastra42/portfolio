@@ -1,6 +1,6 @@
 # Email Triage & Routing Agent
 
-> An LLM classifier sitting on a shared support mailbox that decides who actually owns each incoming request and forwards it there — removing a manual handoff that accounted for ~92% of the queue.
+> An LLM classifier sitting on a shared support mailbox that decides who owns each incoming request and forwards it there — removing a manual handoff that accounted for ~92% of the queue.
 
 | | |
 |---|---|
