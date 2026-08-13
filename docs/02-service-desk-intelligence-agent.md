@@ -42,17 +42,17 @@ Everything it derives flows into an analytics warehouse that drives a three-cade
 ```mermaid
 flowchart TB
     subgraph src["Ticketing system"]
-        T["Open tickets<br/>threads · comments · attachments"]
+        T["Open tickets<br/> threads · comments · attachments"]
         KB["Knowledge base"]
     end
 
     subgraph nightly["Nightly run — one pass per open ticket"]
         direction TB
-        A["Assemble<br/>full conversation, own notes excluded"]
-        F{"Changed since<br/>last night?"}
-        R["Redact<br/>PII stripped from text and images"]
-        M["Analyse<br/>summary · next step · blocker<br/>risk · priority · category"]
-        G["Ground<br/>internal KB → past resolutions →<br/>official vendor docs"]
+        A["Assemble<br/> full conversation, own notes excluded"]
+        F{"Changed since<br/> last night?"}
+        R["Redact<br/> PII stripped from text and images"]
+        M["Analyse<br/> summary · next step · blocker<br/> risk · priority · category"]
+        G["Ground<br/> internal KB → past resolutions →<br/> official vendor docs"]
     end
 
     subgraph act["Act — every write independently gated"]
@@ -63,14 +63,14 @@ flowchart TB
 
     subgraph mem["Memory"]
         ST[("Ticket state<br/>+ activity log")]
-        RES[("Resolution corpus<br/>from closed tickets")]
-        ENV[("Environment facts<br/>from technicians")]
+        RES[("Resolution corpus<br/> from closed tickets")]
+        ENV[("Environment facts<br/> from technicians")]
     end
 
     subgraph intel["Leadership intelligence"]
-        INS["Nightly analysis<br/>daily · weekly · monthly board"]
+        INS["Nightly analysis<br/> daily · weekly · monthly board"]
         WH[("Analytics warehouse")]
-        DASH["Dashboard<br/>metrics · trends · narrative"]
+        DASH["Dashboard<br/> metrics · trends · narrative"]
     end
 
     T --> A --> F
@@ -128,15 +128,15 @@ The design assumes it will be wrong about something eventually, and is built so 
 
 ```mermaid
 flowchart LR
-    REQ["Proposed action"] --> K{"Global<br/>stop?"}
+    REQ["Proposed action"] --> K{"Global<br/> stop?"}
     K -- engaged --> X1["Refused"]
-    K -- clear --> D{"External<br/>write?"}
-    D -- "yes, and<br/>write-block on" --> X2["Refused"]
-    D -- otherwise --> C{"This capability<br/>enabled?"}
+    K -- clear --> D{"External<br/> write?"}
+    D -- "yes, and<br/> write-block on" --> X2["Refused"]
+    D -- otherwise --> C{"This capability<br/> enabled?"}
     C -- no --> X3["Refused"]
-    C -- yes --> DEPT{"Department<br/>enabled for it?"}
+    C -- yes --> DEPT{"Department<br/> enabled for it?"}
     DEPT -- no --> X4["Refused"]
-    DEPT -- yes --> S{"Within this<br/>capability's<br/>blast radius?"}
+    DEPT -- yes --> S{"Within this<br/> capability's<br/> blast radius?"}
     S -- no --> X5["Refused"]
     S -- yes --> GO["Executed"]
     X1 & X2 & X3 & X4 & X5 --> AUD[["Audit record"]]
