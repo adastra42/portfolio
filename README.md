@@ -68,6 +68,12 @@ The same principles recur across all three, and they're what I'd point to first.
 
 ## About
 
-Senior Security Administrator working across IT Operations & Security — with a habit of building the fix when the same problem keeps coming back. These three systems were researched, designed, built, and deployed solo, and are all running in production today.
+Applied AI Engineer | Production LLM Systems, Agents & Automation
 
-**[LinkedIn](https://linkedin.com/in/zanesolomon)** · **[GitHub](https://github.com/adastra42)**
+I design and ship reliable AI systems for real operational environments, with a focus on bounded autonomy, evaluation, observability, security, and measurable business outcomes.
+
+My background in IT operations and cybersecurity informs how I build: failure modes, permissions, adversarial input, rollback, auditability, and production reliability are first-class design concerns.
+
+Currently a Senior Security Administrator working across IT Operations & Security.
+
+**[LinkedIn](https://linkedin.com/in/zanesolomon)**
