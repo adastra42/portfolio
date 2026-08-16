@@ -1,12 +1,10 @@
-# AI Systems for IT Operations & Security
+# Applied AI Engineer building reliable production agents and LLM systems
 
 I build AI systems that give small teams back their attention.
 
-Three production systems, designed and shipped solo, for an IT organization supporting a multi-brand franchise network. Each one takes work that was quietly consuming a team with no spare capacity — manual email routing, ticket reconstruction, more security findings than anyone had time to read — and turns it into something that runs unattended and can be trusted while it does.
+Three production systems, designed and shipped end-to-end, handling real operational workflows across IT and cybersecurity. Each one takes work that was quietly consuming a team with no spare capacity — manual email routing, ticket reconstruction, more security findings than anyone had time to read — and turns it into something that runs unattended and can be trusted while it does.
 
 Getting a model to produce output was the easy part. The work was making that output **safe enough to act on, cheap enough to run continuously, and honest enough that people kept using it after the novelty wore off.**
-
-> **A note on code.** These are production systems built for my employer, so the source isn't public. What's here is the architecture, the design reasoning, and the trade-offs — the parts I'd want to talk through anyway.
 
 ---
 
